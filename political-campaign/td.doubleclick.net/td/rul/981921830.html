@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <meta http-equiv="origin-trial" content="Avh5Ny0XEFCyQ7+oNieXskUrqY8edUzL5/XrwKlGjARQHW4TFRK+jVd5HnDIpY20n5OLHfgU4ku7x48N3uhG/A0AAABxeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=">
+</head>
+
+<body>
+    <script>
+        var ig_list = {
+            "interestGroups": [{
+                "action": 0,
+                "expirationTimeInSeconds": 2592000,
+                "interestGroupAttributes": {
+                    "owner": "https://td.doubleclick.net",
+                    "name": "1j463062533",
+                    "biddingLogicUrl": "https://td.doubleclick.net/td/bjs",
+                    "dailyUpdateUrl": "https://td.doubleclick.net/td/update?ig_name=1j463062533\u0026tag_eid=44803230",
+                    "trustedBiddingSignalsUrl": "https://td.doubleclick.net/td/bts",
+                    "trustedBiddingSignalsKeys": ["1sFHABAw!2sZi4lUA!3sAAptDV5mZjU2"],
+                    "userBiddingSignals": [null, null, 1711708240065345],
+                    "ads": [{
+                        "renderUrl": "https://tdsf.doubleclick.net/td/adfetch/gda?adg_id=152236082317\u0026cr_id=669117053185\u0026cv_id=0\u0026format=${AD_WIDTH}x${AD_HEIGHT}\u0026rds=${RENDER_DATA}\u0026seat=2",
+                        "metadata": ["152236082317", "669117053185", null, "20434814814"],
+                        "adRenderId": "z8fHGYznCbg"
+                    }, {
+                        "renderUrl": "https://tdsf.doubleclick.net/td/adfetch/gda?adg_id=152236082317\u0026cr_id=669117053185\u0026cv_id=0\u0026format=${AD_WIDTH}x${AD_HEIGHT}\u0026rds=${RENDER_DATA}\u0026seat=2",
+                        "metadata": ["152236082317", "669117053185", null, "20434814814"],
+                        "adRenderId": "z8fHGYznCbg"
+                    }, {
+                        "renderUrl": "https://tdsf.doubleclick.net/td/adfetch/gda?adg_id=155238375347\u0026cr_id=669181613954\u0026cv_id=0\u0026format=${AD_WIDTH}x${AD_HEIGHT}\u0026rds=${RENDER_DATA}\u0026seat=2",
+                        "metadata": ["155238375347", "669181613954", null, "20434814814"],
+                        "adRenderId": "UyAGjyr5wiw"
+                    }, {
+                        "renderUrl": "https://tdsf.doubleclick.net/td/adfetch/gda?adg_id=155238375347\u0026cr_id=669181613954\u0026cv_id=0\u0026format=${AD_WIDTH}x${AD_HEIGHT}\u0026rds=${RENDER_DATA}\u0026seat=2",
+                        "metadata": ["155238375347", "669181613954", null, "20434814814"],
+                        "adRenderId": "UyAGjyr5wiw"
+                    }],
+                    "executionMode": "group-by-origin",
+                    "biddingWasmHelperUrl": "https://td.doubleclick.net/td/buyer.wasm",
+                    "enableBiddingSignalsPrioritization": true,
+                    "trustedBiddingSignalsSlotSizeMode": "all-slots-requested-sizes"
+                }
+            }]
+        };
+    </script>
+    <script>
+        for (let i of ig_list.interestGroups) {
+            try {
+                if (i.action == 0) {
+                    navigator.joinAdInterestGroup(i.interestGroupAttributes, i.expirationTimeInSeconds);
+                } else if (i.action == 1) {
+                    navigator.leaveAdInterestGroup(i.interestGroupAttributes);
+                }
+            } catch (e) {
+                navigator.sendBeacon(`https://pagead2.googlesyndication.com/pagead/gen_204/?id=turtlex_join_ig&tx_jig=${encodeURIComponent(JSON.stringify(i))}&tx_jem=${e.message}&tx_jen=${e.name}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
